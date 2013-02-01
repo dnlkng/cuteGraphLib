@@ -1,0 +1,24 @@
+digraph foo {
+		node[fillcolor="#008800" myFancyAttr=awesome foobarbaz=pentabarf];
+	A -> B [style="dotted" penwidth=2 dir=both];
+	B -> C;
+	C -> D [dir=both];
+	D -> E;
+	B -> D [dir=none];
+	{
+		node[shape=box fillcolor=indianred color=blue fontcolor=maroon foobarbaz=pentabarf];
+		1 -> 2 -> 3 [color=indianred style="dotted" penwidth=2 dir=back];
+	}
+	E -> 1 [penwidth=2.0 color=blue];
+	2 -> C [color=purple penwidth=2];
+	{
+		rank=same;
+		1;
+		A;
+	}
+	{
+		rank=same;
+		3;
+		D;
+	}
+}

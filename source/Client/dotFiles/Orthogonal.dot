@@ -1,0 +1,22 @@
+digraph G {
+	graph [splines=ortho];
+	node [style="filled", color=white, fillcolor=lightgrey];
+
+	a [label=k shape=box];
+	b [label=b, fillcolor=indianred];
+	c [label=c, style="rounded, filled"];
+	d [label=d shape=box];
+	e [label=e shape=box];
+	1 [label=1 shape=box];
+
+	a -> b -> d;
+	b -> c;
+	b -> e;
+	c -> a;
+	e -> d -> e;
+	1 -> a;
+
+
+	{rank = same; b; c; e;};
+
+}

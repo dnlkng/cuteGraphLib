@@ -1,0 +1,46 @@
+digraph G {
+	graph [splines=true];
+	{
+		node [style="filled" fillcolor="#008800" fontsize=12 myFancyAttr=awesome foobarbaz=pentabarf];
+
+		A[fillcolor=green];
+		B[];
+		C[fillcolor=yellow fontcolor=red];
+		D[];
+		E[shape=box];
+
+		{
+			node [shape=box fillcolor=indianred color=blue fontcolor=maroon foobarbaz=pentabarf];
+			1[];
+			2[fillcolor=gray color=darkgray fontcolor=red];
+			3[];
+		}
+
+	}
+	{
+		edge [];
+		E -> 1 [color=blue penwidth=2];
+		2 -> C [color=purple penwidth=2];
+		A -> B [dir=both arrowhead=dot style="dotted" penwidth=2];
+		B -> C;
+		C -> D [dir=both];
+		D -> E [dir=both arrowhead=dot];
+		B -> D [dir=none];
+
+		{
+			edge [arrowhead=dot color=indianred style="dotted" penwidth=2 dir=back];
+			1 -> 2
+			2 -> 3 [color=yellow];
+		}
+	}
+	{
+		rank=same;
+		1;
+		A;
+	}
+	{
+		rank=same;
+		3;
+		D;
+	}
+}
